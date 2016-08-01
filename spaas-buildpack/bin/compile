@@ -4,7 +4,6 @@ APP_PATH=$1
 CACHE_PATH=$2
 ENV_PATH=$3
 
-apt-get install -y wget
 cd /opt
 wget https://nodejs.org/dist/v0.10.12/node-v0.10.12-linux-x64.tar.gz
 tar xzf node-v0.10.12-linux-x64.tar.gz
@@ -13,5 +12,3 @@ rm node-v0.10.12-linux-x64.tar.gz
 export PATH=/opt/node-v0.10.12-linux-x64/bin:$PATH
 cd $APP_PATH
 npm install
-
-apt-get clean

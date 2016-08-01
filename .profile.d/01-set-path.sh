@@ -1,0 +1,1 @@
+export PATH=/opt/node-v0.10.12-linux-x64/bin:$PATH
