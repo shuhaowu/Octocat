@@ -1,0 +1,6 @@
+#!/bin/bash
+
+APP_PATH=$1
+CACHE_PATH=$2
+ENV_PATH=$3
+

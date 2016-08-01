@@ -1,0 +1,4 @@
+{
+  "base_image_name": "jessie-amd64",
+  "release_method": "git_archive"
+}
