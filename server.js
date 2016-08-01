@@ -140,11 +140,11 @@ var server = http.createServer(function(req, res){
     		res.writeHead(200, {'Content-Type': 'image/gif'});
     		if (query.x || query.y) {
     			logger.log("Octocat to be resized");
-    			var imgConversionSettings = {	
+    			var imgConversionSettings = {
 	    			srcData: img,
 					format: 'png'
 				}
-	    		
+
 	    		if (query.x) {
 	    			imgConversionSettings.width = Number(query.x);
 	    			logger.log("Octocat.x = " + imgConversionSettings.width);
@@ -169,6 +169,7 @@ var server = http.createServer(function(req, res){
   }
 });
 
-server.listen(3000, function () {
-	logger.log('Server running at http://127.0.0.1:3000');
+var port = process.env.PORT || 3000;
+server.listen(port, function () {
+	logger.log('Server running at http://127.0.0.1:' + port);
 });
